@@ -1,0 +1,266 @@
+/* Glassmorphism navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Left-side text */
+.text-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+/* Typing animation and green text */
+.typing-animation {
+    font-size: 24px;
+    color: #0a650a; /* Set text color to black */
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid lightgreen;
+    animation: typing 6s steps(10) 1s forwards, blink 0.75s step-end 6s forwards;
+}
+
+/* Buttons container */
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    z-index: 100;
+}
+
+/* Button styles */
+.button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0a650a;  /* Light green */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for buttons */
+.button:hover {
+    background-color: #76C76C;  /* Darker shade of light green */
+}
+
+/* Full-screen image */
+.full-screen-image {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Text overlay on image */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 100%;  /* Moved text a little higher */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;  /* Text color changed to black */
+    text-align: center;
+}
+
+.overlay-text h1 {
+    font-size: 48px; /* Larger font size for heading */
+    margin: 0;
+    color: black; /* Set heading color to black */
+}
+
+.overlay-text p {
+    font-size: 24px; /* Smaller font size for paragraph */
+    margin-top: 10px;
+    color: black; /* Set paragraph color to black */
+}
+
+/* Typing animation keyframes */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.hero-section h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: black; /* Set text color to black */
+}
+
+.hero-section p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: black; /* Set text color to black */
+}
+
+/* Features Section */
+.features-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.feature {
+    background-color: #e0f7e0;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    width: 200px;
+    color: black; /* Set feature text color to black */
+}
+
+/* How It Works Section */
+.how-it-works-section {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+.how-it-works-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.how-it-works-grid div {
+    width: 45%;
+}
+
+.how-it-works-grid h3 {
+    font-size: 20px;
+    color: black; /* Set section heading color to black */
+}
+
+.how-it-works-grid ul {
+    color: black; /* Set list items color to black */
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 40px 20px;
+    background-color: #e0f7e0;
+    text-align: center;
+}
+
+.testimonials blockquote {
+    font-style: italic;
+    margin: 20px 0;
+    color: black; /* Set testimonial text color to black */
+}
+
+/* Trending Crops Section */
+.trending-crops-section {
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+}
+
+.crops-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.crop {
+    background-color: #e0f7e0;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    width: 200px;
+    text-align: center;
+    color: black; /* Set crop text color to black */
+}
+
+/* Footer Section */
+.footer {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.footer a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Center align text for the Join the Revolution section */
+.cta-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.cta-heading {
+    font-size: 2.5rem; /* Larger font size for the heading */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: black; /* Set text color to black */
+}
+
+.cta-text {
+    font-size: 1.2rem; /* Smaller font size for the paragraph */
+    color: black; /* Set text color to black */
+}
+
+/* Overlay text styles */
+.overlay-text {
+    position: absolute;
+    top: 45%; /* Moved text a little higher */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: black; /* Set text color to black */
+    z-index: 10;
+}
+
+.overlay-text h1 {
+    font-size: 3rem; /* Larger font size for the main heading */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: black; /* Set heading color to black */
+}
+
+.overlay-text p {
+    font-size: 1.5rem; /* Slightly smaller font size for the paragraph */
+    color: black; /* Set paragraph color to black */
+}

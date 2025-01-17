@@ -20,11 +20,22 @@ function Login() {
     axios
       .post("http://localhost:3001/login", { email, password })
       .then((result) => {
-        if (result.data === "Success") {
+        if (result.data.message === "Success") {
+          const { role } = result.data;
           localStorage.setItem("email", email);
-          navigate("/home");
+          localStorage.setItem("role", role);
+
+          if (role === "Farmer") {
+            navigate("/farmerdashboard");
+          } else if (role === "Merchant") {
+            navigate("/merchantdashboard");
+          } else {
+            setError("Unknown role. Please contact support.");
+          }
+        } else if (result.data.message) {
+          setError(result.data.message); // Display the error message from the backend
         } else {
-          setError(result.data);
+          setError("Login failed. Please check your credentials.");
         }
       })
       .catch((err) => {

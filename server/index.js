@@ -15,11 +15,11 @@ mongoose.connect("mongodb://127.0.0.1:27017/Agrilink", {
 
 app.post("/login", (req, res) => {
   const { email, password } = req.body;
-  UserModel.findOne({ email })
-    .then(user => {
+  UserModel.findOne({ email: email })
+    .then((user) => {
       if (user) {
         if (user.password === password) {
-          res.json({ message: "Success", user });
+          res.json({ message: "Success", role: user.role });
         } else {
           res.json({ message: "Incorrect Password" });
         }
@@ -27,8 +27,9 @@ app.post("/login", (req, res) => {
         res.json({ message: "Not Registered" });
       }
     })
-    .catch(err => res.status(500).json({ error: "Server Error" }));
+    .catch((err) => res.json(err));
 });
+
 
 app.post("/register", async (req, res) => {
   const { name, email, phone, password, role } = req.body;

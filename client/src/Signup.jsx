@@ -1,16 +1,16 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import axios from 'axios';
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "./Signup.css";
 
 function Signup() {
-
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [role, setRole] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [role, setRole] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -19,84 +19,80 @@ function Signup() {
       alert("Passwords do not match!");
       return;
     }
-    axios.post('http://localhost:3001/register', { name, email, phone, password, role })
-      .then(result => {
+    axios
+      .post("http://localhost:3001/register", { name, email, phone, password, role })
+      .then((result) => {
         console.log(result);
-        navigate('/login');
+        navigate("/login");
       })
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
-      <div className="bg-white p-3 rounded w-25">
-        <h2>Register</h2>
+    <div className="signup-container">
+      <div className="signup-form">
+        <h2 className="signup-title">Create Account</h2>
         <form onSubmit={handleSubmit}>
-          <div className="mb-3">
-            <label htmlFor="name"><strong>Name</strong></label>
+          <div className="form-group">
+            <label htmlFor="name">Name</label>
             <input
               type="text"
-              placeholder="Enter Name"
-              autoComplete="off"
-              name="name"
-              className="form-control rounded-0"
+              id="name"
+              placeholder="Enter your full name"
+              value={name}
               onChange={(e) => setName(e.target.value)}
               required
             />
           </div>
-          <div className="mb-3">
-            <label htmlFor="email"><strong>Email</strong></label>
+          <div className="form-group">
+            <label htmlFor="email">Email</label>
             <input
               type="email"
-              placeholder="Enter Email"
-              autoComplete="off"
-              name="email"
-              className="form-control rounded-0"
+              id="email"
+              placeholder="Enter your email"
+              value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
-          <div className="mb-3">
-            <label htmlFor="phone"><strong>Phone Number</strong></label>
+          <div className="form-group">
+            <label htmlFor="phone">Phone Number</label>
             <input
               type="tel"
-              placeholder="Enter Phone Number"
-              autoComplete="off"
-              name="phone"
-              className="form-control rounded-0"
+              id="phone"
+              placeholder="Enter your phone number"
+              value={phone}
               onChange={(e) => setPhone(e.target.value)}
               required
             />
           </div>
-          <div className="mb-3">
-            <label htmlFor="password"><strong>Password</strong></label>
+          <div className="form-group">
+            <label htmlFor="password">Password</label>
             <input
               type="password"
-              placeholder="Enter Password"
-              autoComplete="off"
-              name="password"
-              className="form-control rounded-0"
+              id="password"
+              placeholder="Enter your password"
+              value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
             />
           </div>
-          <div className="mb-3">
-            <label htmlFor="confirmPassword"><strong>Confirm Password</strong></label>
+          <div className="form-group">
+            <label htmlFor="confirmPassword">Confirm Password</label>
             <input
               type="password"
-              placeholder="Confirm Password"
-              autoComplete="off"
-              name="confirmPassword"
-              className="form-control rounded-0"
+              id="confirmPassword"
+              placeholder="Re-enter your password"
+              value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
               required
             />
           </div>
-          <div className="mb-3">
-            <label htmlFor="role"><strong>Role</strong></label>
+          <div className="form-group">
+            <label htmlFor="role">Role</label>
             <select
-              name="role"
-              className="form-control rounded-0"
+              id="role"
+              value={role}
               onChange={(e) => setRole(e.target.value)}
               required
             >
@@ -105,12 +101,12 @@ function Signup() {
               <option value="Merchant">Merchant</option>
             </select>
           </div>
-          <button type="submit" className="btn btn-success w-100 rounded-0">
+          <button type="submit" className="signup-button">
             Register
           </button>
         </form>
-        <p>Already have an Account</p>
-        <Link to="/login" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
+        <p className="login-link-text">Already have an account?</p>
+        <Link to="/login" className="login-link">
           Login
         </Link>
       </div>

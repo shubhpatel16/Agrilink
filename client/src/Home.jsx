@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion'; // Import motion from framer-motion
+import { motion } from 'framer-motion';
 import './Home.css';
-import image1 from './images/image1.jpg';
-import image2 from './images/hi.jpg';
-import image3 from './images/image1.jpg';
+import image1 from './images/image5.jpg';
+import image2 from './images/image4.jpg';
+import image3 from './images/image3.jpg';
 
 function Home() {
   const images = [image1, image2, image3];
@@ -13,9 +13,9 @@ function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // Change image every 5 seconds
+    }, 5000); 
 
-    return () => clearInterval(interval); // Cleanup on component unmount
+    return () => clearInterval(interval); 
   }, [images.length]);
 
   return (
@@ -34,7 +34,7 @@ function Home() {
           <motion.h1
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 2 }} // Controls fade-in duration
+            transition={{ duration: 2 }} 
             className="animated-text header-text"
           >
             Empowering Farmers, Simplifying Crop Trade with Agrilink
@@ -42,7 +42,7 @@ function Home() {
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 2, delay: 2 }} // Slight delay for the second paragraph
+            transition={{ duration: 2, delay: 2 }} 
             className="animated-text"
           >
             Buy and sell crops with ease. Connect with trusted farmers and buyers, all in one place.

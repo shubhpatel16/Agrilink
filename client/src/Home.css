@@ -75,23 +75,23 @@
 
 .overlay-text {
     position: absolute;
-    top: 100%;  /* Moved text a little higher */
+    top: 100%; 
     left: 50%;
     transform: translate(-50%, -50%);
-    color: black;  /* Text color changed to black */
+    color: white; 
     text-align: center;
 }
 
 .overlay-text h1 {
-    font-size: 48px; /* Larger font size for heading */
+    font-size: 48px; 
     margin: 0;
-    color: black; /* Set heading color to black */
+    color: white;
 }
 
 .overlay-text p {
-    font-size: 24px; /* Smaller font size for paragraph */
+    font-size: 24px;
     margin-top: 10px;
-    color: black; /* Set paragraph color to black */
+    color: white; 
 }
 
 /* Typing animation keyframes */
@@ -121,13 +121,13 @@
 .hero-section h1 {
     font-size: 32px;
     font-weight: bold;
-    color: black; /* Set text color to black */
+    color: black; 
 }
 
 .hero-section p {
     font-size: 18px;
     margin-top: 10px;
-    color: black; /* Set text color to black */
+    color: black; 
 }
 
 /* Features Section */
@@ -149,7 +149,7 @@
     border-radius: 10px;
     font-size: 18px;
     width: 200px;
-    color: black; /* Set feature text color to black */
+    color: black; 
 }
 
 /* How It Works Section */
@@ -169,11 +169,11 @@
 
 .how-it-works-grid h3 {
     font-size: 20px;
-    color: black; /* Set section heading color to black */
+    color: black; 
 }
 
 .how-it-works-grid ul {
-    color: black; /* Set list items color to black */
+    color: black; 
 }
 
 /* Testimonials Section */
@@ -186,7 +186,7 @@
 .testimonials blockquote {
     font-style: italic;
     margin: 20px 0;
-    color: black; /* Set testimonial text color to black */
+    color: black; 
 }
 
 /* Trending Crops Section */
@@ -207,7 +207,7 @@
     font-size: 18px;
     width: 200px;
     text-align: center;
-    color: black; /* Set crop text color to black */
+    color: black; 
 }
 
 /* Footer Section */
@@ -231,36 +231,36 @@
 }
 
 .cta-heading {
-    font-size: 2.5rem; /* Larger font size for the heading */
+    font-size: 2.5rem; 
     font-weight: bold;
     margin-bottom: 20px;
-    color: black; /* Set text color to black */
+    color: black; 
 }
 
 .cta-text {
-    font-size: 1.2rem; /* Smaller font size for the paragraph */
-    color: black; /* Set text color to black */
+    font-size: 1.2rem; 
+    color: black; 
 }
 
 /* Overlay text styles */
 .overlay-text {
     position: absolute;
-    top: 45%; /* Moved text a little higher */
+    top: 45%; 
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: black; /* Set text color to black */
+    color: black; 
     z-index: 10;
 }
 
 .overlay-text h1 {
-    font-size: 3rem; /* Larger font size for the main heading */
+    font-size: 3rem; 
     font-weight: bold;
-    margin-bottom: 20px;
-    color: black; /* Set heading color to black */
+    margin-bottom: 30px;
+    color: white; 
 }
 
 .overlay-text p {
-    font-size: 1.5rem; /* Slightly smaller font size for the paragraph */
-    color: black; /* Set paragraph color to black */
+    font-size: 1.3rem;
+    color: white; 
 }

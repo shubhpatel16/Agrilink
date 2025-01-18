@@ -10,6 +10,9 @@ body {
   
   /* Navigation Bar */
   .navbar {
+    position: fixed; /* Ensures the navbar stays at the top */
+    top: 0;
+    left: 0;
     width: 100%;
     background: #2e7d32;
     padding: 15px 20px;
@@ -17,13 +20,15 @@ body {
     font-size: 24px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensures it appears above other content */
   }
   
-  /* Dashboard Container */
+  /* Adding space below navbar */
   .dashboard-container {
     flex: 1;
     display: flex;
     flex-direction: column;
+    margin-top: 70px; /* Matches the height of the navbar */
   }
   
   .dashboard-content {
@@ -38,6 +43,8 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
   }
+  
+  /* Other styles remain unchanged */
   
   .header {
     display: flex;

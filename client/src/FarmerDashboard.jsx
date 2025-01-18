@@ -32,9 +32,9 @@ function FarmerDashboard() {
   return (
     <div className="dashboard-container">
       {/* Navigation Bar */}
-      <nav className="navbar">
+    
         <h1 className="navbar-title">Dashboard</h1>
-      </nav>
+      
 
       {/* Dashboard Content */}
       <div className="dashboard-content">

@@ -9,7 +9,7 @@ body {
   }
   
   /* Navigation Bar */
-  .navbar {
+ /.navbar {
     position: fixed; /* Ensures the navbar stays at the top */
     top: 0;
     left: 0;
@@ -21,7 +21,7 @@ body {
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000; /* Ensures it appears above other content */
-  }
+  } 
   
   /* Adding space below navbar */
   .dashboard-container {

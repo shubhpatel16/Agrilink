@@ -1,0 +1,4 @@
+.responsiveappbar {
+    margin-top: 80px; /* Increased from 50px to 80px to move it further down */
+    background-color: rgb(91, 219, 91);
+}

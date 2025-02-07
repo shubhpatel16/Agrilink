@@ -1,0 +1,24 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #f1dddd;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000; /* Ensure the Navbar is on top */
+  }
+  
+  .appbar {
+    margin-top: 60px; /* Adjust this value based on the height of your Navbar */
+  }
+  
+.app-container {
+  margin-top: 120px; /* Adjust this value based on the height of your Navbar */
+}
+
+.main-content {
+  padding: 20px; /* Optional: Add some padding for better spacing */
+}

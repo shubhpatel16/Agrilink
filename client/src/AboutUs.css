@@ -1,0 +1,81 @@
+/* General Styling */
+.about-us {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(to bottom, #ffffff, #e8f5e9);
+    padding-bottom: 50px;
+}
+
+/* Header Section */
+.about-info {
+    background: url("https://www.transparenttextures.com/patterns/green-dust.png"), #4CAF50;
+    color: white;
+    padding: 60px 20px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-info h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.about-info p {
+    font-size: 18px;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.about-info strong {
+    color: #ffeb3b;
+}
+
+/* Footer Section */
+.footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links button {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    font-size: 14px;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.footer-links button:hover {
+    background: white;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.footer p {
+    font-size: 14px;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-info {
+        padding: 40px 10px;
+    }
+
+    .footer-links button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}

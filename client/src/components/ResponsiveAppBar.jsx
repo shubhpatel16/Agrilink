@@ -12,8 +12,9 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import logo from '../images/logo.png';
 import './ResponsiveAppBar.css';
-import logo from '/Users/shubhpatel/Desktop/Agrilink/client/src/images/logo.png';
+
 
 const pages = ['Buy', 'Sell', 'About Us', 'Contact Us'];
 const settings = ['Profile', 'Home Page', 'Logout', 'Settings'];

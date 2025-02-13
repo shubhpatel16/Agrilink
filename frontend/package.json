@@ -6,23 +6,23 @@
     "@material-ui/core": "^4.12.4",
     "@material-ui/data-grid": "^4.0.0-alpha.37",
     "@paypal/react-paypal-js": "^7.8.3",
-    "@reduxjs/toolkit": "^1.9.3",
+    "@reduxjs/toolkit": "^1.9.7",
     "@stripe/react-stripe-js": "^2.1.0",
     "@stripe/stripe-js": "^1.52.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.3.4",
+    "axios": "^1.7.9",
     "country-state-city": "^3.1.2",
     "js-cookie": "^3.0.1",
-    "react": "^18.2.0",
+    "react": "^18.3.1",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-lottie": "^1.2.3",
-    "react-redux": "^8.0.5",
+    "react-redux": "^8.1.3",
     "react-router-dom": "^6.8.2",
     "react-scripts": "5.0.1",
-    "react-toastify": "^9.1.1",
+    "react-toastify": "^11.0.3",
     "redux": "^4.2.1",
     "redux-thunk": "^2.4.2",
     "redux-toolkit": "^1.1.2",
@@ -60,13 +60,13 @@
     "tailwindcss": "^3.2.7"
   },
   "overrides": {
-  "lodash": "^4.17.21",
-  "nth-check": "^2.0.1",
-  "css-select": "^4.3.0",
-  "postcss": "^8.4.31",
-  "resolve-url-loader": {
-    "postcss": "^8.4.31"
-  }
+    "lodash": "^4.17.21",
+    "nth-check": "^2.0.1",
+    "css-select": "^4.3.0",
+    "postcss": "^8.4.31",
+    "resolve-url-loader": {
+      "postcss": "^8.4.31"
+    }
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

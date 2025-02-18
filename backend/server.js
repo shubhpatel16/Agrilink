@@ -11,7 +11,7 @@ process.on("uncaughtException", (err) => {
 // config
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config({
-    path: "backend/config/.env"
+    path: "backend/config/.env",
   });
 }
 
@@ -19,7 +19,11 @@ if (process.env.NODE_ENV !== "production") {
 connectDatabase();
 // craete server
 const server = app.listen(process.env.PORT, () => {
-  console.log(`Server started on PORT: ${process.env.PORT} in ${process.env.NODE_ENV || "development"} mode.`);
+  console.log(
+    `Server started on PORT: ${process.env.PORT} in ${
+      process.env.NODE_ENV || "development"
+    } mode.`
+  );
 });
 
 // handling unhandled promise rejections

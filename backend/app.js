@@ -26,7 +26,9 @@ if (process.env.NODE_ENV !== "production") {
 
 // import routes
 const user = require("./controller/user");
+const shop = require("./controller/shop");
 app.use("/api/v2/user", user);
+app.use("/api/v2/shop", shop);
 
 // for Error handling
 app.use(ErrorHandler);

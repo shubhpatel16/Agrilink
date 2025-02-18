@@ -13,39 +13,56 @@ const Singup = () => {
   const [password, setPassword] = useState("");
   const [visible, setVisible] = useState(false);
   const [avatar, setAvatar] = useState(null);
+  const [avatarPreview, setAvatarPreview] = useState(null);
+
+  // const handleFileInputChange = (e) => {
+  //   const file = e.target.files[0];
+  //   setAvatar(file);
+  //   const reader = new FileReader();
+
+  //   reader.onload = () => {
+  //     if (reader.readyState === 2) {
+  //       setAvatar(reader.result);
+  //     }
+  //   };
+
+  //   reader.readAsDataURL(file);
+  // };
 
   const handleFileInputChange = (e) => {
     const file = e.target.files[0];
-    setAvatar(file);
-    const reader = new FileReader();
+    if (file) {
+      setAvatar(file);
 
-    reader.onload = () => {
-      if (reader.readyState === 2) {
-        setAvatar(reader.result);
-      }
-    };
-
-    reader.readAsDataURL(e.target.files[0]);
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setAvatarPreview(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const config = {headers: { "Content-Type": "multipart/form-data" }};
-    const newForm =new FormData();
+    const config = { headers: { "Content-Type": "multipart/form-data" } };
+    const newForm = new FormData();
 
     newForm.append("file", avatar);
     newForm.append("name", name);
     newForm.append("email", email);
     newForm.append("password", password);
     axios
-      .post(`${server}/user/create-user`, newForm, config).then((res) => {
+      .post(`${server}/user/create-user`, newForm, config)
+      .then((res) => {
         toast.success(res.data.message);
         setName("");
         setEmail("");
         setPassword("");
-        setAvatar();
-      }).catch((error) => {
+        setAvatar(null);
+        setAvatarPreview(null);
+      })
+      .catch((error) => {
         toast.error(error.response.data.message);
       });
   };
@@ -140,9 +157,9 @@ const Singup = () => {
               ></label>
               <div className="mt-2 flex items-center">
                 <span className="inline-block h-8 w-8 rounded-full overflow-hidden">
-                  {avatar ? (
+                  {avatarPreview ? (
                     <img
-                      src={avatar}
+                      src={avatarPreview}
                       alt="avatar"
                       className="h-full w-full object-cover rounded-full"
                     />

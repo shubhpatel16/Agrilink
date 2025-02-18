@@ -18,7 +18,8 @@ const ActivationPage = () => {
           console.log(res.data.message);
           // setSuccess(true);
         } catch (error) {
-          console.log(error.response.data.message);setError(true);
+          console.log(error.response.data.message);
+          setError(true);
         }
       };
       activationEmail();
@@ -35,11 +36,11 @@ const ActivationPage = () => {
         alignItems: "center",
       }}
     >
-      { error ? (
+      {error ? (
         <p>Your token is expired!</p>
       ) : (
         <p>Your account has been created successfully!</p>
-      ) }
+      )}
     </div>
   );
 };

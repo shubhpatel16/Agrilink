@@ -17,27 +17,26 @@ router.post("/create-user", upload.single("file"), async (req, res, next) => {
     const userExists = await User.findOne({ email });
 
     if (userExists) {
-      // const filename = req.file.filename;
-      // const filepath = `uploads/${filename}`;
-      //   fs.unlink(filepath, (err) => {
-      //     if(err){
-      //       console.log(err);
-      //       res.status(500).json({ message: 'Error deleting file' });
-      //     }
-      //   });
+      const filename = req.file.filename;
+      const filepath = `uploads/${filename}`;
+      fs.unlink(filepath, (err) => {
+        if (err) {
+          console.log(err);
+          res.status(500).json({ message: "Error deleting file" });
+        }
+      });
       return next(new ErrorHandler("User already exists", 400));
     }
 
     let avatar = {
       public_id: "default_avatar",
-      url: "/uploads/default-avatar.png",
+      url: "/default-avatar.png",
     };
 
-    // If file is uploaded, update avatar
     if (req.file) {
       avatar = {
         public_id: req.file.filename,
-        url: `/uploads/${req.file.filename}`,
+        url: `/${req.file.filename}`,
       };
     }
 
@@ -203,6 +202,27 @@ router.post(
       });
 
       sendToken(user, 201, res);
+    } catch (error) {
+      return next(new ErrorHandler(error.message, 500));
+    }
+  })
+);
+
+//log out user
+router.get(
+  "/logout",
+  catchAsyncErrors(async (req, res, next) => {
+    try {
+      res.cookie("token", null, {
+        expires: new Date(Date.now()),
+        httpOnly: true,
+        // sameSite: "none",
+        // secure: true,
+      });
+      res.status(201).json({
+        success: true,
+        message: "Log out successful!",
+      });
     } catch (error) {
       return next(new ErrorHandler(error.message, 500));
     }

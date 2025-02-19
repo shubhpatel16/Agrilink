@@ -20,15 +20,15 @@ const ShopCreate = () => {
 
   const handleFileInputChange = (e) => {
     const file = e.target.files[0];
-    if (file) {
-      setAvatar(file);
+    // if (file) {
+    setAvatar(file);
 
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setAvatarPreview(reader.result);
-      };
-      reader.readAsDataURL(file);
-    }
+    // const reader = new FileReader();
+    // reader.onloadend = () => {
+    //   setAvatarPreview(reader.result);
+    // };
+    // reader.readAsDataURL(file);
+    // }
   };
 
   const handleSubmit = async (e) => {
@@ -44,15 +44,7 @@ const ShopCreate = () => {
     newForm.append("address", address);
     newForm.append("phoneNumber", phoneNumber);
     axios
-      .post(`${server}/shop/create-shop`, {
-        name,
-        email,
-        password,
-        avatar,
-        zipCode,
-        address,
-        phoneNumber,
-      })
+      .post(`${server}/shop/create-shop`, newForm, config)
       .then((res) => {
         toast.success(res.data.message);
         setName("");
@@ -64,7 +56,7 @@ const ShopCreate = () => {
         setPhoneNumber("");
       })
       .catch((error) => {
-        toast.error(error.response.data.message);
+        toast.error(error?.response?.data?.message);
       });
   };
 

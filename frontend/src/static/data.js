@@ -1232,72 +1232,71 @@ export const brandingData = [
 export const categoriesData = [
   {
     id: 1,
-    title: "Computers and Laptops",
+    title: "Fruits, Vegetables & Grains",
     subTitle: "",
     image_Url:
-      "https://cdn.shopify.com/s/files/1/1706/9177/products/NEWAppleMacbookProwithM1ProChip14InchLaptop2021ModelMKGQ3LL_A_16GB_1TBSSD_custommacbd.jpg?v=1659592838",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk3YSs12iBhwbAl1cVIW49sWyZaQHetypRGw&s",
   },
   {
     id: 2,
-    title: "cosmetics and body care",
+    title: "Seeds & Saplings",
     subTitle: "",
     image_Url:
-      "https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2021-07/kosme1.png",
+      "https://articles-1mg.gumlet.io/articles/wp-content/uploads/2016/12/seeds.jpg?compress=true&quality=80&w=640&dpr=2.6",
   },
   {
     id: 3,
-    title: "Accesories",
+    title: "Fertilizers & Pesticides",
     subTitle: "",
-    image_Url:
-      "https://img.freepik.com/free-vector/ordering-goods-online-internet-store-online-shopping-niche-e-commerce-website-mother-buying-babies-clothes-footwear-toys-infant-accessories_335657-2345.jpg?w=2000",
+    image_Url: "https://cdn.mos.cms.futurecdn.net/aQ7Hw8jtuDUsUP4wG3Pzq3.jpg",
   },
   {
     id: 4,
-    title: "Cloths",
+    title: "Farming Tools & Machinery",
     subTitle: "",
     image_Url:
-      "https://www.shift4shop.com/2015/images/industries/clothing/clothing-apparel.png",
+      "https://img1.exportersindia.com/product_images/bc-full/dir_146/4354212/agricultural-tools-1529140432-3985813.jpeg",
   },
   {
     id: 5,
-    title: "Shoes",
+    title: "Dairy ",
     subTitle: "",
     image_Url:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvBQPQMVNRd6TtDkGs2dCri0Y-rxKkFOiEWw&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThqN5hvp2B2wk0Dt24a1preOlL6amtq9BBOw&s",
   },
   {
     id: 6,
-    title: "Gifts",
+    title: "Organic & Natural Products",
     subTitle: "",
     image_Url:
-      "https://securecdn.pymnts.com/wp-content/uploads/2014/11/Gifts-Photo-700x489.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE8AJ_g8la371FCeVOC8J2HCjqNCR4Y-SaHw&s",
   },
   {
     id: 7,
-    title: "Pet Care",
+    title: "Agro Chemicals",
     subTitle: "",
-    image_Url: "https://cdn.openpr.com/T/c/Tc15444071_g.jpg",
+    image_Url:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiwmWqLBaTL26omPTPzhDUpT5x74hN5WmQXw&s",
   },
   {
     id: 8,
-    title: "Mobile and Tablets",
+    title: "Greenhouse & Hydroponics",
     subTitle: "",
     image_Url:
-      "https://st-troy.mncdn.com/mnresize/1500/1500/Content/media/ProductImg/original/mpwp3tua-apple-iphone-14-256gb-mavi-mpwp3tua-637986832343472449.jpg",
+      "https://www.greenproventures.com/wp-content/uploads/2022/11/Pros-Cons-of-Using-Hydroponics-in-Greenhouses-GreenPro-Ventures.jpg",
   },
   {
     id: 9,
-    title: "Music and Gaming",
+    title: "Land & Farming Services",
     subTitle: "",
-    image_Url:
-      "https://static.vecteezy.com/system/resources/previews/011/996/555/original/3d-black-headphone-illustration-ecommerce-icon-png.png",
+    image_Url: "https://whiteox.in/images/land_management1.jpg",
   },
   {
     id: 10,
     title: "Others",
     subTitle: "",
     image_Url:
-      "https://searchspring.com/wp-content/uploads/2022/10/Hero-Image-Platform-Others-2.png",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt_ZDntuFRfw5dCMXjyIPMgttiOVb_V9hmMA&s",
   },
 ];
 
@@ -1305,22 +1304,22 @@ export const categoriesData = [
 export const productData = [
   {
     id: 1,
-    category: "Computers and Laptops",
-    name: "MacBook pro M2 chipset 256gb ssd 8gb ram space-gray color with apple 1 year warranty",
+    category: "Fruits, Vegetables & Grains",
+    name: "Mango",
     description:
-      "Product details are a crucial part of any eCommerce website or online marketplace. These details help the potential customers to make an informed decision about the product they are interested in buying. A well-written product description can also be a powerful marketing tool that can help to increase sales.Product details typically include information about the product's features, specifications, dimensions, weight, materials, and other relevant information that can help customers to understand the product better. The product details section should also include high-quality images and videos of the product, as well as customer reviews and ratings.",
+      "A mango is a tropical fruit that is egg-shaped, with a smooth skin and soft, orange flesh. It is a member of the drupe family of fruits, which means it has a stone in the middle.A mango is a tropical fruit that is egg-shaped, with a smooth skin and soft, orange flesh. It is a member of the drupe family of fruits, which means it has a stone in the middle.A mango is a tropical fruit that is egg-shaped, with a smooth skin and soft, orange flesh. It is a member of the drupe family of fruits, which means it has a stone in the middle.",
     image_Url: [
       {
         public_id: "test",
-        url: "https://www.istorebangladesh.com/images/thumbs/0000286_macbook-pro-m1_550.png",
+        url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIZsfkc2zDCA423IfWyeg_FaRvFs_LyLeMUw&s",
       },
       {
         public_id: "test",
-        url: "https://www.istorebangladesh.com/images/thumbs/0000286_macbook-pro-m1_550.png",
+        url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIZsfkc2zDCA423IfWyeg_FaRvFs_LyLeMUw&s",
       },
     ],
     shop: {
-      name: "Apple inc.",
+      name: "Fruit inc.",
       shop_avatar: {
         public_id: "test",
         url: "https://www.hatchwise.com/wp-content/uploads/2022/05/amazon-logo-1024x683.png",
@@ -1335,22 +1334,22 @@ export const productData = [
   },
   {
     id: 2,
-    category: "Mobile and Tablets",
-    name: "Iphone 14 pro max 256 gb ssd and 8 gb ram silver colour",
+    category: "Fruits, Vegetables & Grains",
+    name: "Banana",
     description:
-      "Product details are a crucial part of any eCommerce website or online marketplace. These details help the potential customers to make an informed decision about the product they are interested in buying. A well-written product description can also be a powerful marketing tool that can help to increase sales.Product details typically include information about the product's features, specifications, dimensions, weight, materials, and other relevant information that can help customers to understand the product better. The product details section should also include high-quality images and videos of the product, as well as customer reviews and ratings.",
+      "A banana is a tropical fruit that grows on a flowering plant in the genus Musa. It's a berry that's long and edible. Bananas are a popular fruit that are high in fiber, potassium, and other nutrient.A banana is a tropical fruit that grows on a flowering plant in the genus Musa. It's a berry that's long and edible. Bananas are a popular fruit that are high in fiber, potassium, and other nutrient.A banana is a tropical fruit that grows on a flowering plant in the genus Musa. It's a berry that's long and edible. Bananas are a popular fruit that are high in fiber, potassium, and other nutrient.",
     image_Url: [
       {
         public_id: "test",
-        url: "https://m.media-amazon.com/images/I/31Vle5fVdaL.jpg",
+        url: "https://nutritionsource.hsph.harvard.edu/wp-content/uploads/2018/08/bananas-1354785_1920.jpg",
       },
       {
         public_id: "test",
-        url: "https://m.media-amazon.com/images/I/31Vle5fVdaL.jpg",
+        url: "https://nutritionsource.hsph.harvard.edu/wp-content/uploads/2018/08/bananas-1354785_1920.jpg",
       },
     ],
     shop: {
-      name: "Amazon Ltd",
+      name: "Freshmart Ltd",
       shop_avatar: {
         public_id: "test",
         url: "https://www.hatchwise.com/wp-content/uploads/2022/05/amazon-logo-1024x683.png",
@@ -1361,14 +1360,13 @@ export const productData = [
     rating: 5,
     total_sell: 80,
     stock: 10,
-    category: "Mobile & Tablets",
   },
   {
     id: 1,
-    category: "Computers and Laptop",
-    name: "MacBook pro M2 chipset 256gb ssd 8gb ram space gray color with apple 1 year warranty",
+    category: "Fruits, Vegetables & Grains",
+    name: "Potato",
     description:
-      "Product details are a crucial part of any eCommerce website or online marketplace. These details help the potential customers to make an informed decision about the product they are interested in buying. A well-written product description can also be a powerful marketing tool that can help to increase sales.Product details typically include information about the product's features, specifications, dimensions, weight, materials, and other relevant information that can help customers to understand the product better. The product details section should also include high-quality images and videos of the product, as well as customer reviews and ratings.",
+      "The potato is a starchy tuberous vegetable native to the Americas that is consumed as a staple food in many parts of the world. Potatoes are underground tubers of the plant Solanum tuberosum, a perennial in the nightshade family Solanaceae.The potato is a starchy tuberous vegetable native to the Americas that is consumed as a staple food in many parts of the world. Potatoes are underground tubers of the plant Solanum tuberosum, a perennial in the nightshade family Solanaceae.The potato is a starchy tuberous vegetable native to the Americas that is consumed as a staple food in many parts of the world. Potatoes are underground tubers of the plant Solanum tuberosum, a perennial in the nightshade family Solanaceae.",
     image_Url: [
       {
         public_id: "test",
@@ -1380,7 +1378,7 @@ export const productData = [
       },
     ],
     shop: {
-      name: "Apple inc.",
+      name: "Agrostar inc.",
       shop_avatar: {
         public_id: "test",
         url: "https://www.hatchwise.com/wp-content/uploads/2022/05/amazon-logo-1024x683.png",
@@ -1392,32 +1390,31 @@ export const productData = [
     rating: 4,
     total_sell: 75,
     stock: 10,
-    category: "Computers & Laptop",
   },
   {
     id: 4,
-    category: "Others",
-    name: "New Fashionable Watch for men 2023 with multiple colors",
+    category: "Fruits, Vegetables & Grains",
+    name: "Millets",
     description:
-      "Product details are a crucial part of any eCommerce website or online marketplace. These details help the potential customers to make an informed decision about the product they are interested in buying. A well-written product description can also be a powerful marketing tool that can help to increase sales.Product details typically include information about the product's features, specifications, dimensions, weight, materials, and other relevant information that can help customers to understand the product better. The product details section should also include high-quality images and videos of the product, as well as customer reviews and ratings.",
+      "Millets are a highly varied group of small-seeded grasses, widely grown around the world as cereal crops or grains for fodder and human food. Most millets belong to the tribe Paniceae.Millets are a highly varied group of small-seeded grasses, widely grown around the world as cereal crops or grains for fodder and human food. Most millets belong to the tribe Paniceae.Millets are a highly varied group of small-seeded grasses, widely grown around the world as cereal crops or grains for fodder and human food. Most millets belong to the tribe Paniceae.",
     image_Url: [
       {
         public_id: "test",
-        url: "https://i0.wp.com/eccocibd.com/wp-content/uploads/2022/01/1802NL02_1.png?fit=550%2C550&ssl=1",
+        url: "https://assets1.canadiangrocer.com/images/v/max_width_1440/s3fs-public/2024-10/16.web_images_aug24_655x368_millet.jpg",
       },
       {
         public_id: "test",
-        url: "https://i0.wp.com/eccocibd.com/wp-content/uploads/2022/01/1802NL02_1.png?fit=550%2C550&ssl=1",
+        url: "https://assets1.canadiangrocer.com/images/v/max_width_1440/s3fs-public/2024-10/16.web_images_aug24_655x368_millet.jpg",
       },
     ],
     shop: {
-      name: "Shahriar Watch House",
+      name: "Grainmart",
       shop_avatar: {
         public_id: "test",
-        url: "https://www.hatchwise.com/wp-content/uploads/2022/05/amazon-logo-1024x683.png",
+        url: "https://assets1.canadiangrocer.com/images/v/max_width_1440/s3fs-public/2024-10/16.web_images_aug24_655x368_millet.jpg",
       },
       ratings: 4.2,
-      category: "Others",
+      category: "Fruits, Vegetables & Grains",
     },
     price: 100,
     discount_price: 79,
@@ -1427,25 +1424,25 @@ export const productData = [
   },
   {
     id: 5,
-    category: "Shoes",
-    name: "New Trend shoes for gents with all sizes",
+    category: "Seeds & Saplings",
+    name: "Tomato seed",
     description:
       "Product details are a crucial part of any eCommerce website or online marketplace. These details help the potential customers to make an informed decision about the product they are interested in buying. A well-written product description can also be a powerful marketing tool that can help to increase sales.Product details typically include information about the product's features, specifications, dimensions, weight, materials, and other relevant information that can help customers to understand the product better. The product details section should also include high-quality images and videos of the product, as well as customer reviews and ratings.",
     image_Url: [
       {
         public_id: "test",
-        url: "https://mirzacdns3.s3.ap-south-1.amazonaws.com/cache/catalog/RLV0015/2-800x800.jpg",
+        url: "https://m.media-amazon.com/images/I/41KjmvqDpEL._AC_UF1000,1000_QL80_.jpg",
       },
       {
         public_id: "test",
-        url: "https://mirzacdns3.s3.ap-south-1.amazonaws.com/cache/catalog/RLV0015/2-800x800.jpg",
+        url: "https://m.media-amazon.com/images/I/41KjmvqDpEL._AC_UF1000,1000_QL80_.jpg",
       },
     ],
     shop: {
-      name: "Alisha Shoes Mart",
+      name: "Seedmart",
       shop_avatar: {
         public_id: "test",
-        url: "https://www.hatchwise.com/wp-content/uploads/2022/05/amazon-logo-1024x683.png",
+        url: "https://m.media-amazon.com/images/I/41KjmvqDpEL._AC_UF1000,1000_QL80_.jpg",
       },
       ratings: 4.2,
     },
@@ -1454,28 +1451,27 @@ export const productData = [
     rating: 5,
     total_sell: 49,
     stock: 10,
-    category: "Shoes",
   },
   {
     id: 1,
-    name: "Gaming Headphone Asus with mutiple color and free delivery",
+    name: "NPK Fertilizer",
     description:
-      "Product details are a crucial part of any eCommerce website or online marketplace. These details help the potential customers to make an informed decision about the product they are interested in buying. A well-written product description can also be a powerful marketing tool that can help to increase sales.Product details typically include information about the product's features, specifications, dimensions, weight, materials, and other relevant information that can help customers to understand the product better. The product details section should also include high-quality images and videos of the product, as well as customer reviews and ratings.",
+      "A fertilizer (American English) or fertiliser (British English) is any material of natural or synthetic origin that is applied to soil or to plant tissues to supply plant nutrients.A fertilizer (American English) or fertiliser (British English) is any material of natural or synthetic origin that is applied to soil or to plant tissues to supply plant nutrients.A fertilizer (American English) or fertiliser (British English) is any material of natural or synthetic origin that is applied to soil or to plant tissues to supply plant nutrients.A fertilizer (American English) or fertiliser (British English) is any material of natural or synthetic origin that is applied to soil or to plant tissues to supply plant nutrients.",
     image_Url: [
       {
         public_id: "test",
-        url: "https://www.startech.com.bd/image/cache/catalog/headphone/havit/h763d/h763d-02-500x500.jpg",
+        url: "https://fertilizer-machine.net/wp-content/uploads/2018/06/types-of-fertilizer.jpg",
       },
       {
         public_id: "test",
-        url: "https://eratablet.com/wp-content/uploads/2022/08/H51ba6537405f4948972e293927673546u.jpg",
+        url: "https://fertilizer-machine.net/wp-content/uploads/2018/06/types-of-fertilizer.jpg",
       },
     ],
     shop: {
-      name: "Asus Ltd",
+      name: "Fertimart Ltd",
       shop_avatar: {
         public_id: "test",
-        url: "https://www.hatchwise.com/wp-content/uploads/2022/05/amazon-logo-1024x683.png",
+        url: "https://fertilizer-machine.net/wp-content/uploads/2018/06/types-of-fertilizer.jpg",
       },
       ratings: 4.2,
     },
@@ -1493,28 +1489,29 @@ export const productData = [
     ],
     total_sell: 20,
     stock: 10,
-    category: "Music and Gaming",
+    category: "Fertilizers & Pesticides",
   },
   {
     id: 4,
-    name: "New Fashionable Watch for men 2023 with multiple colors",
+    name: "Natural Fertilizer",
+    category: "Fertilizers & Pesticides",
     description:
-      "Product details are a crucial part of any eCommerce website or online marketplace. These details help the potential customers to make an informed decision about the product they are interested in buying. A well-written product description can also be a powerful marketing tool that can help to increase sales.Product details typically include information about the product's features, specifications, dimensions, weight, materials, and other relevant information that can help customers to understand the product better. The product details section should also include high-quality images and videos of the product, as well as customer reviews and ratings.",
+      "Natural fertilizer is an organic substance that comes from the earth and is added to soil to help plants grow. It can be made from plants or animals.Natural fertilizer is an organic substance that comes from the earth and is added to soil to help plants grow. It can be made from plants or animals.Natural fertilizer is an organic substance that comes from the earth and is added to soil to help plants grow. It can be made from plants or animals.Natural fertilizer is an organic substance that comes from the earth and is added to soil to help plants grow. It can be made from plants or animals.Natural fertilizer is an organic substance that comes from the earth and is added to soil to help plants grow. It can be made from plants or animals.",
     image_Url: [
       {
         public_id: "test",
-        url: "https://i0.wp.com/eccocibd.com/wp-content/uploads/2022/01/1802NL02_1.png?fit=550%2C550&ssl=1",
+        url: "https://ariesagro.com/wp-content/uploads/2022/11/Agromin-Foliar-Spray-powder.png",
       },
       {
         public_id: "test",
-        url: "https://i0.wp.com/eccocibd.com/wp-content/uploads/2022/01/1802NL02_1.png?fit=550%2C550&ssl=1",
+        url: "https://ariesagro.com/wp-content/uploads/2022/11/Agromin-Foliar-Spray-powder.png",
       },
     ],
     shop: {
-      name: "Shahriar Watch House",
+      name: "Naturalmart",
       shop_avatar: {
         public_id: "test",
-        url: "https://www.hatchwise.com/wp-content/uploads/2022/05/amazon-logo-1024x683.png",
+        url: "https://ariesagro.com/wp-content/uploads/2022/11/Agromin-Foliar-Spray-powder.png",
       },
       ratings: 4.2,
     },
@@ -1526,24 +1523,24 @@ export const productData = [
   },
   {
     id: 1,
-    name: "Gaming Headphone Asus with mutiple color and free delivery",
+    name: "Pesticides",
     description:
-      "Product details are a crucial part of any eCommerce website or online marketplace. These details help the potential customers to make an informed decision about the product they are interested in buying. A well-written product description can also be a powerful marketing tool that can help to increase sales.Product details typically include information about the product's features, specifications, dimensions, weight, materials, and other relevant information that can help customers to understand the product better. The product details section should also include high-quality images and videos of the product, as well as customer reviews and ratings.",
+      "Pesticides are substances that destroy, prevent, or control pests, diseases, or weeds. They can also protect plants during production, storage, and transport.Pesticides are substances that destroy, prevent, or control pests, diseases, or weeds. They can also protect plants during production, storage, and transport.Pesticides are substances that destroy, prevent, or control pests, diseases, or weeds. They can also protect plants during production, storage, and transport.Pesticides are substances that destroy, prevent, or control pests, diseases, or weeds. They can also protect plants during production, storage, and transport.",
     image_Url: [
       {
         public_id: "test",
-        url: "https://www.startech.com.bd/image/cache/catalog/headphone/havit/h763d/h763d-02-500x500.jpg",
+        url: "https://krushidukan.bharatagri.com/cdn/shop/files/Dr.Bacto_sVBM-BharatAgriKrushidukan.png?v=1720071056&width=533",
       },
       {
         public_id: "test",
-        url: "https://eratablet.com/wp-content/uploads/2022/08/H51ba6537405f4948972e293927673546u.jpg",
+        url: "https://krushidukan.bharatagri.com/cdn/shop/files/Dr.Bacto_sVBM-BharatAgriKrushidukan.png?v=1720071056&width=533",
       },
     ],
     shop: {
-      name: "Asus Ltd",
+      name: "Pestimart Ltd",
       shop_avatar: {
         public_id: "test",
-        url: "https://www.hatchwise.com/wp-content/uploads/2022/05/amazon-logo-1024x683.png",
+        url: "https://krushidukan.bharatagri.com/cdn/shop/files/Dr.Bacto_sVBM-BharatAgriKrushidukan.png?v=1720071056&width=533",
       },
       ratings: 4.2,
     },
@@ -1561,28 +1558,29 @@ export const productData = [
     ],
     total_sell: 20,
     stock: 10,
+    category: "Fertilizers & Pesticides",
   },
   {
     id: 2,
-    category: "Mobile and Tablets",
-    name: "Iphone 14 pro max 256 gb ssd and 8 gb ram silver colour",
+    category: "Farming Tools & Machinery",
+    name: "Handy Cultivator",
     description:
-      "Product details are a crucial part of any eCommerce website or online marketplace. These details help the potential customers to make an informed decision about the product they are interested in buying. A well-written product description can also be a powerful marketing tool that can help to increase sales.Product details typically include information about the product's features, specifications, dimensions, weight, materials, and other relevant information that can help customers to understand the product better. The product details section should also include high-quality images and videos of the product, as well as customer reviews and ratings.",
+      "Agricultural hand tools have been essential companions to farmers for centuries, aiding in various tasks from tilling the soil to harvesting crops. While modern machinery has revolutionized farming practices, hand tools remain indispensable for smaller-scale operations, precision work, and tasks in hard-to-reach areas. In this guide, we’ll explore the top agricultural hand tools, highlighting their uses and importance in farming.Agricultural hand tools have been essential companions to farmers for centuries, aiding in various tasks from tilling the soil to harvesting crops. While modern machinery has revolutionized farming practices, hand tools remain indispensable for smaller-scale operations, precision work, and tasks in hard-to-reach areas. In this guide, we’ll explore the top agricultural hand tools, highlighting their uses and importance in farming.",
     image_Url: [
       {
         public_id: "test",
-        url: "https://m.media-amazon.com/images/I/31Vle5fVdaL.jpg",
+        url: "https://jcblhandtools.com/wp-content/uploads/2024/05/Garden-Fork.webp",
       },
       {
         public_id: "test",
-        url: "https://m.media-amazon.com/images/I/31Vle5fVdaL.jpg",
+        url: "https://jcblhandtools.com/wp-content/uploads/2024/05/Garden-Fork.webp",
       },
     ],
     shop: {
-      name: "Amazon Ltd",
+      name: "Toolmart Ltd",
       shop_avatar: {
         public_id: "test",
-        url: "https://www.hatchwise.com/wp-content/uploads/2022/05/amazon-logo-1024x683.png",
+        url: "https://jcblhandtools.com/wp-content/uploads/2024/05/Garden-Fork.webp",
       },
       ratings: 4.2,
     },
@@ -1593,25 +1591,25 @@ export const productData = [
   },
   {
     id: 1,
-    category: "Music and Gaming",
-    name: "Gaming Headphone Asus with mutiple color and free delivery",
+    category: "Farming Tools & Machinery",
+    name: "Hoe (Agri Tools)",
     description:
-      "Product details are a crucial part of any eCommerce website or online marketplace. These details help the potential customers to make an informed decision about the product they are interested in buying. A well-written product description can also be a powerful marketing tool that can help to increase sales.Product details typically include information about the product's features, specifications, dimensions, weight, materials, and other relevant information that can help customers to understand the product better. The product details section should also include high-quality images and videos of the product, as well as customer reviews and ratings.",
+      "A hoe is an ancient and versatile agricultural and horticultural hand tool used to shape soil, remove weeds, clear soil, and harvest root crops. Shaping the soil includes piling soil around the base of plants (hilling), digging narrow furrows (drills) and shallow trenches for planting seeds or bulbs.A hoe is an ancient and versatile agricultural and horticultural hand tool used to shape soil, remove weeds, clear soil, and harvest root crops. Shaping the soil includes piling soil around the base of plants (hilling), digging narrow furrows (drills) and shallow trenches for planting seeds or bulbs.A hoe is an ancient and versatile agricultural and horticultural hand tool used to shape soil, remove weeds, clear soil, and harvest root crops. Shaping the soil includes piling soil around the base of plants (hilling), digging narrow furrows (drills) and shallow trenches for planting seeds or bulbs.",
     image_Url: [
       {
         public_id: "test",
-        url: "https://www.startech.com.bd/image/cache/catalog/headphone/havit/h763d/h763d-02-500x500.jpg",
+        url: "https://fmexim.com/images/asset-agri-tools-hoe.jpg",
       },
       {
         public_id: "test",
-        url: "https://eratablet.com/wp-content/uploads/2022/08/H51ba6537405f4948972e293927673546u.jpg",
+        url: "https://fmexim.com/images/asset-agri-tools-hoe.jpg",
       },
     ],
     shop: {
-      name: "Asus Ltd",
+      name: "Toolmart Ltd",
       shop_avatar: {
         public_id: "test",
-        url: "https://www.hatchwise.com/wp-content/uploads/2022/05/amazon-logo-1024x683.png",
+        url: "https://fmexim.com/images/asset-agri-tools-hoe.jpg",
       },
       ratings: 4.2,
     },

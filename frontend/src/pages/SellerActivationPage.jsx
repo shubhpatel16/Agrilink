@@ -6,7 +6,7 @@ import { server } from "../server";
 const SellerActivationPage = () => {
   const { activation_token } = useParams();
   const [error, setError] = useState(false);
-  // const [success, setSuccess] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   useEffect(() => {
     if (activation_token) {
@@ -16,7 +16,7 @@ const SellerActivationPage = () => {
             activation_token,
           });
           console.log(res.data.message);
-          // setSuccess(true);
+          setSuccess(true);
         } catch (error) {
           console.log(error.response.data.message);
           setError(true);
@@ -24,7 +24,7 @@ const SellerActivationPage = () => {
       };
       activationEmail();
     }
-  }, []);
+  }, [activation_token]);
 
   return (
     <div

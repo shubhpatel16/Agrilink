@@ -31,7 +31,7 @@ import { loadSeller, loadUser } from "./redux/actions/user";
 import { useSelector } from "react-redux";
 import ProtectedRoute from "./ProtectedRoute";
 import { ShopHomePage } from "./ShopRoutes";
-import SellerProtectedRoute from "./SellerProtectedRoute.js";
+import SellerProtectedRoute from "./SellerProtectedRoute";
 
 function App() {
   const { loading, isAuthenticated } = useSelector((state) => state.user);

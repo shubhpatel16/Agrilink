@@ -4,12 +4,9 @@ const router = express.Router();
 const fs = require("fs");
 const jwt = require("jsonwebtoken");
 const sendMail = require("../utils/sendMail");
-// const sendToken = require("../utils/jwtToken");
 const { isAuthenticated, isSeller } = require("../middleware/auth");
 const Shop = require("../model/shop");
 const { upload } = require("../multer");
-// const { isAuthenticated, isSeller, isAdmin } = require("../middleware/auth");
-// const cloudinary = require("cloudinary");
 const catchAsyncErrors = require("../middleware/catchAsyncErrors");
 const ErrorHandler = require("../utils/ErrorHandeler");
 const sendShopToken = require("../utils/shopToken");
@@ -30,10 +27,6 @@ router.post("/create-shop", upload.single("file"), async (req, res, next) => {
       });
       return next(new ErrorHandler("User already exists", 400));
     }
-
-    // const myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
-    //   folder: "avatars",
-    // });
 
     let avatar = {
       public_id: "default_avatar",
@@ -181,6 +174,27 @@ router.get(
       res.status(200).json({
         success: true,
         seller,
+      });
+    } catch (error) {
+      return next(new ErrorHandler(error.message, 500));
+    }
+  })
+);
+
+// log out from shop
+router.get(
+  "/logout",
+  catchAsyncErrors(async (req, res, next) => {
+    try {
+      res.cookie("seller_token", null, {
+        expires: new Date(Date.now()),
+        httpOnly: true,
+        sameSite: "none",
+        secure: true,
+      });
+      res.status(201).json({
+        success: true,
+        message: "Log out successful!",
       });
     } catch (error) {
       return next(new ErrorHandler(error.message, 500));

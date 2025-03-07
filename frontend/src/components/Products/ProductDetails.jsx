@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import styles from "../../styles/styles";
 import {
   AiFillHeart,
@@ -7,6 +7,9 @@ import {
   AiOutlineMessage,
   AiOutlineShoppingCart,
 } from "react-icons/ai";
+import { backend_url } from "../../server";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllProductsShop } from "../../redux/actions/product";
 // import PoductDetailsInfo from "";
 
 const ProductDetails = ({ data }) => {
@@ -14,6 +17,16 @@ const ProductDetails = ({ data }) => {
   const [click, setClick] = useState(false);
   const [select, setSelect] = useState(0);
   const navigate = useNavigate();
+
+  const { products } = useSelector((state) => state.products);
+  // const { events } = useSelector((state) => state.events);
+  const { id } = useParams();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getAllProductsShop(data && data.shop._id));
+    // dispatch(getAllEventsShop(id));
+  }, [dispatch]);
 
   const decrementCount = () => {
     if (count > 1) {
@@ -38,43 +51,32 @@ const ProductDetails = ({ data }) => {
               {/* <div className="block w-full 800px:flex"> */}
               <div className="w-full 800px:w-[50%]">
                 <img
-                  src={data.image_Url[select].url}
+                  // src={data.image_Url[select].url}
+                  src={`${backend_url}${data && data.images[select]}`}
                   alt=""
                   className="w-[80%]"
                 />
                 <div className="w-full flex">
-                  {/* {data &&
-                    data.images.map((i, index) => ( */}
-                  <div
-                    className={`${
-                      select === 0 ? "border" : "null"
-                    } cursor-pointer`}
-                  >
-                    <img
-                      src={`${data?.image_Url[0].url}`}
-                      alt=""
-                      className="h-[200px] overflow-hidden mr-3 mt-3"
-                      onClick={() => setSelect(0)}
-                    />
-                  </div>
+                  {data &&
+                    data.images.map((i, index) => (
+                      <div
+                        className={`${
+                          select === 0 ? "border" : "null"
+                        } cursor-pointer`}
+                      >
+                        <img
+                          src={`${backend_url}${i}`}
+                          alt=""
+                          className="h-[200px] overflow-hidden rounded-lg mr-3 mt-3"
+                          onClick={() => setSelect(index)}
+                        />
+                      </div>
+                    ))}
                   <div
                     className={`${
                       select === 1 ? "border" : "null"
                     } cursor-pointer`}
-                  >
-                    <img
-                      src={`${data?.image_Url[1].url}`}
-                      alt=""
-                      className="h-[200px] overflow-hidden mr-3 mt-3"
-                      onClick={() => setSelect(1)}
-                    />
-                  </div>
-                  {/* ))} */}
-                  {/* <div
-                    className={`${
-                      select === 1 ? "border" : "null"
-                    } cursor-pointer`}
-                  ></div> */}
+                  ></div>
                 </div>
               </div>
               <div className="w-full 800px:w-[50%] pt-5">
@@ -82,10 +84,10 @@ const ProductDetails = ({ data }) => {
                 <p>{data.description}</p>
                 <div className="flex pt-3">
                   <h4 className={`${styles.productDiscountPrice}`}>
-                    {data.discount_price}₹
+                    {data.discountPrice}₹
                   </h4>
                   <h3 className={`${styles.price}`}>
-                    {data.price ? data.price + "₹" : null}
+                    {data.originalPrice ? data.originalPrice + "₹" : null}
                   </h3>
                 </div>
 
@@ -142,19 +144,19 @@ const ProductDetails = ({ data }) => {
                   </span>
                 </div>
                 <div className="flex items-center pt-8">
-                  {/* <Link to={`/shop/preview/${data?.shop._id}`}> */}
-                  <img
-                    src={data.shop.shop_avatar.url}
-                    alt=""
-                    className="w-[50px] h-[50px] rounded-full mr-2"
-                  />
-                  {/* </Link> */}
+                  <Link to={`/shop/preview/${data?.shop._id}`}>
+                    <img
+                      src={`${backend_url}${data.shop.avatar.url}`}
+                      alt=""
+                      className="w-[50px] h-[50px] rounded-full mr-2"
+                    />
+                  </Link>
                   <div className="pr-8">
-                    {/* <Link to={`/shop/preview/${data?.shop._id}`}> */}
-                    <h3 className={`${styles.shop_name} pb-1 pt-1`}>
-                      {data.shop.name}
-                    </h3>
-                    {/* </Link> */}
+                    <Link to={`/shop/preview/${data?.shop._id}`}>
+                      <h3 className={`${styles.shop_name} pb-1 pt-1`}>
+                        {data.shop.name}
+                      </h3>
+                    </Link>
                     <h5 className="pb-3 text-[15px]">
                       {/* ({averageRating}/5) Ratings */}({data.shop.ratings})
                       Ratings
@@ -172,7 +174,7 @@ const ProductDetails = ({ data }) => {
               </div>
             </div>
           </div>
-          <PoductDetailsInfo data={data} />
+          <PoductDetailsInfo data={data} products={products} />
           <br />
           <br />
         </div>
@@ -181,7 +183,7 @@ const ProductDetails = ({ data }) => {
   );
 };
 
-const PoductDetailsInfo = ({ data }) => {
+const PoductDetailsInfo = ({ data, products }) => {
   const [active, setActive] = useState(1);
   return (
     <div className="bg-[#f5f6fb] px-3 800px:px-10 py-2 rounded ">
@@ -229,8 +231,8 @@ const PoductDetailsInfo = ({ data }) => {
       {active === 1 ? (
         <>
           <p className="py-2 text-[18px] leading-8 pb-10 whitespace-pre-line">
-            {/* {data.description} */}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ab
+            {data.description}
+            {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ab
             dolor vero dicta voluptatibus dolorum! Eius aut ea harum eos
             nesciunt vero sit unde, adipisci facilis autem, cumque aperiam
             beatae voluptatem repellat! Facilis illum sunt rem tempora vero,
@@ -263,7 +265,7 @@ const PoductDetailsInfo = ({ data }) => {
             voluptatum unde esse harum dolores maiores illum, assumenda
             laudantium ipsam dolorum eaque aliquam aut sequi minima nam nisi.
             Dolor, sequi accusantium. Nam voluptates inventore saepe odit harum
-            omnis minima ab in porro sequi.
+            omnis minima ab in porro sequi. */}
           </p>
         </>
       ) : null}
@@ -302,27 +304,27 @@ const PoductDetailsInfo = ({ data }) => {
         <div className="w-full flex 800px:flex p-5">
           {/* <div className="w-full block 800px:flex p-5"> */}
           <div className="w-full 800px:w-[50%]">
-            {/* <Link to={`/shop/preview/${data.shop._id}`}> */}
-            <div className="flex items-center">
-              <img
-                src={data.shop.shop_avatar.url}
-                className="w-[50px] h-[50px] rounded-full"
-                alt=""
-              />
-              <div className="pl-3">
-                <h3 className={`${styles.shop_name}`}>{data.shop.name}</h3>
-                <h5 className="pb-2 text-[15px]">
-                  {/* ({averageRating}/5)  */}({data.shop.ratings})Ratings
-                </h5>
+            <Link to={`/shop/preview/${data.shop._id}`}>
+              <div className="flex items-center">
+                <img
+                  src={`${backend_url}${data.shop.avatar.url}`}
+                  className="w-[50px] h-[50px] rounded-full"
+                  alt=""
+                />
+                <div className="pl-3">
+                  <h3 className={`${styles.shop_name}`}>{data.shop.name}</h3>
+                  <h5 className="pb-2 text-[15px]">
+                    {/* ({averageRating}/5)  */}({data.shop.ratings})Ratings
+                  </h5>
+                </div>
               </div>
-            </div>
-            {/* </Link> */}
+            </Link>
             <p className="pt-2">
-              {/* {data.shop.description} */}
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi,
+              {data.shop.description}
+              {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi,
               amet. Dolorem repellendus ab, doloribus unde dolores explicabo,
               provident accusantium ipsum cum commodi reprehenderit maiores nam
-              iure blanditiis exercitationem pariatur deleniti.
+              iure blanditiis exercitationem pariatur deleniti. */}
             </p>
           </div>
           <div className="w-full 800px:w-[50%] mt-5 800px:mt-0 800px:flex flex-col items-end">
@@ -330,15 +332,14 @@ const PoductDetailsInfo = ({ data }) => {
               <h5 className="font-[600]">
                 Joined on:{" "}
                 <span className="font-[500]">
-                  {/* {data.shop?.createdAt?.slice(0, 10)} */}
-                  01 Jan,2025
+                  {data.shop?.createdAt?.slice(0, 10)}
+                  {/* 01 Jan,2025 */}
                 </span>
               </h5>
               <h5 className="font-[600] pt-3">
                 Total Products:{" "}
                 <span className="font-[500]">
-                  {/* {products && products.length} */}
-                  50
+                  {products && products.length}
                 </span>
               </h5>
               <h5 className="font-[600] pt-3">

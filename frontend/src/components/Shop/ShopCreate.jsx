@@ -20,15 +20,15 @@ const ShopCreate = () => {
 
   const handleFileInputChange = (e) => {
     const file = e.target.files[0];
-    // if (file) {
-    setAvatar(file);
+    if (file) {
+      setAvatar(file);
 
-    // const reader = new FileReader();
-    // reader.onloadend = () => {
-    //   setAvatarPreview(reader.result);
-    // };
-    // reader.readAsDataURL(file);
-    // }
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setAvatarPreview(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -51,6 +51,7 @@ const ShopCreate = () => {
         setEmail("");
         setPassword("");
         setAvatar(null);
+        setAvatarPreview(null);
         setZipCode("");
         setAddress("");
         setPhoneNumber("");
@@ -214,7 +215,7 @@ const ShopCreate = () => {
                 <span className="inline-block h-8 w-8 rounded-full overflow-hidden">
                   {avatarPreview ? (
                     <img
-                      src={avatar}
+                      src={avatarPreview}
                       alt="avatar"
                       className="h-full w-full object-cover rounded-full"
                     />

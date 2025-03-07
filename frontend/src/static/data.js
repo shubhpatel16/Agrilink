@@ -1232,27 +1232,27 @@ export const brandingData = [
 export const categoriesData = [
   {
     id: 1,
-    title: "Fruits, Vegetables & Grains",
+    title: "Fruits, Vegetables and Grains",
     subTitle: "",
     image_Url:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk3YSs12iBhwbAl1cVIW49sWyZaQHetypRGw&s",
   },
   {
     id: 2,
-    title: "Seeds & Saplings",
+    title: "Seeds and Saplings",
     subTitle: "",
     image_Url:
       "https://articles-1mg.gumlet.io/articles/wp-content/uploads/2016/12/seeds.jpg?compress=true&quality=80&w=640&dpr=2.6",
   },
   {
     id: 3,
-    title: "Fertilizers & Pesticides",
+    title: "Fertilizers and Pesticides",
     subTitle: "",
     image_Url: "https://cdn.mos.cms.futurecdn.net/aQ7Hw8jtuDUsUP4wG3Pzq3.jpg",
   },
   {
     id: 4,
-    title: "Farming Tools & Machinery",
+    title: "Farming Tools and Machinery",
     subTitle: "",
     image_Url:
       "https://img1.exportersindia.com/product_images/bc-full/dir_146/4354212/agricultural-tools-1529140432-3985813.jpeg",
@@ -1266,7 +1266,7 @@ export const categoriesData = [
   },
   {
     id: 6,
-    title: "Organic & Natural Products",
+    title: "Organic and Natural Products",
     subTitle: "",
     image_Url:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE8AJ_g8la371FCeVOC8J2HCjqNCR4Y-SaHw&s",
@@ -1280,14 +1280,14 @@ export const categoriesData = [
   },
   {
     id: 8,
-    title: "Greenhouse & Hydroponics",
+    title: "Greenhouse and Hydroponics",
     subTitle: "",
     image_Url:
       "https://www.greenproventures.com/wp-content/uploads/2022/11/Pros-Cons-of-Using-Hydroponics-in-Greenhouses-GreenPro-Ventures.jpg",
   },
   {
     id: 9,
-    title: "Land & Farming Services",
+    title: "Land and Farming Services",
     subTitle: "",
     image_Url: "https://whiteox.in/images/land_management1.jpg",
   },

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "../../styles/styles";
 import logo from "../../Assests/images/logo.png";
-import { categoriesData, productData } from "../../static/data";
+import { categoriesData } from "../../static/data";
 import {
   AiOutlineHeart,
   AiOutlineSearch,
@@ -21,10 +21,10 @@ import { RxCross1 } from "react-icons/rx";
 
 const Header = ({ activeHeading }) => {
   const { isAuthenticated, user } = useSelector((state) => state.user);
-  // const { isSeller } = useSelector((state) => state.seller);
+  const { isSeller } = useSelector((state) => state.seller);
   // const { wishlist } = useSelector((state) => state.wishlist);
   // const { cart } = useSelector((state) => state.cart);
-  // const { allProducts } = useSelector((state) => state.products);
+  const { allProducts } = useSelector((state) => state.products);
   const [searchTerm, setSearchTerm] = useState("");
   const [searchData, setSearchData] = useState(null);
   const [active, setActive] = useState(false);
@@ -38,8 +38,8 @@ const Header = ({ activeHeading }) => {
     setSearchTerm(term);
 
     const filteredProducts =
-      productData &&
-      productData.filter((product) =>
+      allProducts &&
+      allProducts.filter((product) =>
         product.name.toLowerCase().includes(term.toLowerCase())
       );
     setSearchData(filteredProducts);
@@ -77,17 +77,17 @@ const Header = ({ activeHeading }) => {
               className="absolute right-2 top-1.5 cursor-pointer"
             />
             {searchData && searchData.length !== 0 ? (
-              <div className="absolute min-h-[30vh] bg-green-50 shadow-sm-2 z-[9] p-4">
+              <div className="absolute min-w-[95vh] bg-green-50 shadow-sm-2 z-[9] p-4">
                 {searchData &&
                   searchData.map((i, index) => {
                     const d = i.name;
 
                     const Product_name = d.replace(/\s+/g, "-");
                     return (
-                      <Link to={`/product/${Product_name}`}>
-                        <div className="w-full flex items-start-py-3">
+                      <Link to={`/product/${i._id}`}>
+                        <div className="w-full flex items-start-py-3 m-2">
                           <img
-                            src={i.image_Url[0]?.url}
+                            src={`${backend_url}${i.images[0]}`}
                             alt=""
                             className="w-[40px] h-[40px] mr-[10px]"
                           />
@@ -101,11 +101,9 @@ const Header = ({ activeHeading }) => {
           </div>
 
           <div className={`bg-[#58942c] ${styles.button}`}>
-            {/* <Link to={`${isSeller ? "/dashboard" : "/shop-create"}`}> */}
-            <Link to="/shop-create">
+            <Link to={`${isSeller ? "/dashboard" : "/shop-create"}`}>
               <h1 className="text-[#fff] flex items-center">
-                {/* {isSeller ? "Go Dashboard" : "Become Seller"}{" "} */}
-                Become a Seller
+                {isSeller ? "Go Dashboard" : "Become a Seller"}
                 <IoIosArrowForward className="ml-1" />
               </h1>
             </Link>
@@ -169,7 +167,7 @@ const Header = ({ activeHeading }) => {
               >
                 <AiOutlineHeart size={30} color="rgb(255 255 255 / 83%)" />
                 <span className="absolute right-0 top-0 rounded-full bg-red-500 w-4 h-4 top right p-0 m-0 text-white font-mono text-[12px] leading-tight text-center">
-                  {/* {wishlist && wishlist.length} */}5
+                  {/* {wishlist && wishlist.length} */}
                 </span>
               </div>
             </div>

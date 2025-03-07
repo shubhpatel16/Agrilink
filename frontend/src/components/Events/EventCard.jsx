@@ -1,15 +1,16 @@
 import React from "react";
 import styles from "../../styles/styles";
 import CountDown from "./CountDown";
-// import { Link } from "react-router-dom";
-// import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 // import { addTocart } from "../../redux/actions/cart";
-// import { toast } from "react-toastify";
+import { toast } from "react-toastify";
+import { backend_url } from "../../server";
 
-const EventCard = ({ active }) => {
-  // const EventCard = ({ active, data }) => {
+const EventCard = ({ active, data }) => {
+  console.log(data);
   // const { cart } = useSelector((state) => state.cart);
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   // const addToCartHandler = (data) => {
   //   const isItemExists = cart && cart.find((i) => i._id === data._id);
@@ -24,77 +25,52 @@ const EventCard = ({ active }) => {
   //       toast.success("Item added to cart successfully!");
   //     }
   //   }
-  // }
+  // };
   return (
-    // <div
-    //   className={`w-full block bg-white rounded-lg ${
-    //     active ? "unset" : "mb-12"
-    //   } lg:flex p-2`}
-    // >
     <div
       className={`w-full block bg-white rounded-lg ${
         active ? "unset" : "mb-12"
-      } lg:flex p-2 `}
+      } lg:flex p-2`}
     >
       <div className="w-full lg:-w[50%] m-auto">
         <img
-          src="https://ariesagro.com/wp-content/uploads/2022/11/Agromin-Foliar-Spray-powder.png"
+          src={`${backend_url}${data.images[0]}`}
           alt=""
+          className="w-[90%] rounded-lg"
         />
       </div>
       <div className="w-full lg:[w-50%] flex flex-col justify-center">
-        <h2 className={`${styles.productTitle}`}>Natural fertilizer</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit obcaecati
-          aliquid repellat qui aliquam dolorem a possimus, quae dolor quidem
-          iure cumque laudantium consequatur ea molestiae animi! Culpa, veniam
-          nulla.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-          obcaecati aliquid repellat qui aliquam dolorem a possimus, quae dolor
-          quidem iure cumque laudantium consequatur ea molestiae animi! Culpa,
-          veniam nulla.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Sit obcaecati aliquid repellat qui aliquam dolorem a possimus, quae
-          dolor quidem iure cumque laudantium consequatur ea molestiae animi!
-          Culpa, veniam nulla.
-        </p>
+        <h2 className={`${styles.productTitle}`}>{data.name}</h2>
+        <p>{data.description}</p>
         <div className="flex py-2 justify-between">
           <div className="flex">
             <h5 className="font-[500] text-[18px] text-[#d55b45] pr-3 line-through">
-              100000₹
+              {data.originalPrice}₹
             </h5>
             <h5 className="font-bold text-[20px] text-[#333] font-Roboto">
-              80000₹
+              {data.discountPrice}₹
             </h5>
           </div>
-          <span className="pr-3 font-[400] text-[17px] text-[#15a93c]">
-            120 sold
+          <span className="pr-3 font-[400] text-[17px] text-[#44a55e]">
+            {data.sold_out} sold
           </span>
         </div>
-        <CountDown />
+        <CountDown data={data} />
         <br />
+        <div className="flex items-center">
+          <Link to={`/product/${data._id}?isEvent=true`}>
+            <div className={`${styles.button} text-[#fff]`}>See Details</div>
+          </Link>
+          <div
+            className={`${styles.button} text-[#fff] ml-5`}
+            // onClick={() => addToCartHandler(data)}
+          >
+            Add to cart
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
 export default EventCard;
-
-//
-//
-//
-//
-//               {data.originalPrice}$
-//             </h5>
-//
-//           </div>
-
-//         </div>
-//
-
-//       </div>
-
-// <div className="flex items-center">
-//           <Link to={`/product/${data._id}?isEvent=true`}>
-//             <div className={`${styles.button} text-[#fff]`}>See Details</div>
-//           </Link>
-//           <div className={`${styles.button} text-[#fff] ml-5`} onClick={() => addToCartHandler(data)}>Add to cart</div>
-//         </div>

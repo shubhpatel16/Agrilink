@@ -1,57 +1,151 @@
 import React, { useEffect, useState } from "react";
-// import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import Footer from "../components/Layout/Footer";
 import Header from "../components/Layout/Header";
-// import Loader from "../components/Layout/Loader";
+import Loader from "../components/Layout/Loader";
 import ProductCard from "../components/Route/ProductCard/ProductCard";
 import styles from "../styles/styles";
-import { productData } from "../static/data";
 
 const ProductsPage = () => {
   const [searchParams] = useSearchParams();
   const categoryData = searchParams.get("category");
-  // const { allProducts, isLoading } = useSelector((state) => state.products);
+  const { allProducts, isLoading } = useSelector((state) => state.products);
   const [data, setData] = useState([]);
 
   useEffect(() => {
     if (categoryData === null) {
-      const d =
-        productData && productData.sort((a, b) => a.total_sell - b.total_sell);
+      const d = allProducts;
       setData(d);
     } else {
       const d =
-        productData && productData.filter((i) => i.category === categoryData);
+        allProducts && allProducts.filter((i) => i.category === categoryData);
       setData(d);
     }
-    // window.scrollTo(0, 0);
-  }, []);
+    //    window.scrollTo(0,0);
+  }, [allProducts]);
 
   return (
     <>
-      {/* {isLoading ? (
+      {isLoading ? (
         <Loader />
-      ) : (*/}
-      <div>
-        <Header activeHeading={3} />
-        <br />
-        <br />
-        <div className={`${styles.section}`}>
-          <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2 md:gap-[25px] lg:grid-cols-4 lg:gap-[25px] xl:grid-cols-5 xl:gap-[30px] mb-12">
-            {data &&
-              data.map((i, index) => <ProductCard data={i} key={index} />)}
+      ) : (
+        <div>
+          <Header activeHeading={3} />
+          <br />
+          <br />
+          <div className={`${styles.section}`}>
+            <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2 md:gap-[25px] lg:grid-cols-4 lg:gap-[25px] xl:grid-cols-5 xl:gap-[30px] mb-12">
+              {data &&
+                data.map((i, index) => <ProductCard data={i} key={index} />)}
+            </div>
+            {data && data.length === 0 ? (
+              <h1 className="text-center w-full pb-[100px] text-[20px]">
+                No products Found!
+              </h1>
+            ) : null}
           </div>
-          {data && data.length === 0 ? (
-            <h1 className="text-center w-full pb-[100px] text-[20px]">
-              No products Found!
-            </h1>
-          ) : null}
+          <Footer />
         </div>
-        <Footer />
-      </div>
-      {/* )} */}
+      )}
     </>
   );
 };
 
 export default ProductsPage;
+
+// import React, { useEffect, useState } from "react";
+// import { useDispatch, useSelector } from "react-redux";
+// import { useSearchParams } from "react-router-dom";
+// import Footer from "../components/Layout/Footer";
+// import Header from "../components/Layout/Header";
+// import Loader from "../components/Layout/Loader";
+// import ProductCard from "../components/Route/ProductCard/ProductCard";
+// import styles from "../styles/styles";
+// import { getAllProducts } from "../redux/actions/product";
+
+// const ProductsPage = () => {
+//   const dispatch = useDispatch();
+//   const [searchParams] = useSearchParams();
+//   // const categoryData = searchParams.get("category");
+//   const categoryData = decodeURIComponent(searchParams.get("category"));
+
+//   const { allProducts, isLoading } = useSelector((state) => state.products);
+//   const [data, setData] = useState([]);
+//   console.log(categoryData);
+
+//   useEffect(() => {
+//     dispatch(getAllProducts());
+//   }, [dispatch]);
+
+//   // useEffect(() => {
+//   //   if (!allProducts || allProducts.length === 0) return;
+
+//   //   if (categoryData) {
+//   //     const filteredData = allProducts.filter(
+//   //       (item) => item.category === categoryData
+//   //     );
+//   //     setData(filteredData);
+//   //   } else {
+//   //     const sortedData = [...allProducts].sort(
+//   //       (a, b) => a.sold_out - b.sold_out
+//   //     );
+//   //     setData(sortedData);
+//   //   }
+//   // }, [allProducts, categoryData]);
+
+//   useEffect(() => {
+//     if (categoryData === null) {
+//       const d = allProducts
+//         ? [...allProducts].sort((a, b) => a.sold_out - b.sold_out)
+//         : [];
+//       setData(d);
+//     } else {
+//       const d = allProducts
+//         ? allProducts.filter((i) => i.category === categoryData)
+//         : [];
+//       setData(d);
+//     }
+//   }, [allProducts, categoryData]);
+
+//   // useEffect(() => {
+//   //   if (categoryData === null) {
+//   //     const d =
+//   //       allProducts && allProducts.sort((a, b) => a.sold_out - b.sold_out);
+//   //     setData(d);
+//   //   } else {
+//   //     const d =
+//   //       allProducts && allProducts.filter((i) => i.category === categoryData);
+//   //     setData(d);
+//   //   }
+//   //   // window.scrollTo(0, 0);
+//   // }, []);
+
+//   return (
+//     <>
+//       {/* {isLoading ? (
+//         <Loader />
+//       ) : (*/}
+//       <div>
+//         <Header activeHeading={3} />
+//         <br />
+//         <br />
+//         <div className={`${styles.section}`}>
+//           <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2 md:gap-[25px] lg:grid-cols-4 lg:gap-[25px] xl:grid-cols-5 xl:gap-[30px] mb-12">
+//             {data &&
+//               data.map((i, index) => <ProductCard data={i} key={index} />)}
+//           </div>
+//           {data && data.length === 0 ? (
+//             <h1 className="text-center w-full pb-[100px] text-[20px]">
+//               No products Found!
+//             </h1>
+//           ) : null}
+//         </div>
+//         <Footer />
+//       </div>
+//       {/* )} */}
+//     </>
+//   );
+// };
+
+// export default ProductsPage;

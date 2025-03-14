@@ -14,6 +14,10 @@ const ProductsPage = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     if (categoryData === null) {
       const d = allProducts;
       setData(d);

@@ -34,10 +34,10 @@ const Payment = () => {
       .create({
         purchase_units: [
           {
-            description: "Sunflower",
+            description: "AgriLink",
             amount: {
-              currency_code: "USD",
-              value: orderData?.totalPrice,
+              currency_code: "USD", // Change INR to USD
+              value: (orderData?.totalPrice / 83).toFixed(2), // Convert INR to USD (assuming 1 USD = 83 INR)
             },
           },
         ],
@@ -176,9 +176,10 @@ const Payment = () => {
   };
 
   return (
+    // <div className="w-full flex flex-col items-center py-8">
     <div className="w-full flex flex-col items-center py-8">
-      <div className="w-[90%] 1000px:w-[70%] block 800px:flex">
-        <div className="w-full 800px:w-[65%]">
+      <div className="w-[70%] flex">
+        <div className="w-[65%]">
           <PaymentInfo
             user={user}
             open={open}
@@ -189,7 +190,8 @@ const Payment = () => {
             cashOnDeliveryHandler={cashOnDeliveryHandler}
           />
         </div>
-        <div className="w-full 800px:w-[35%] 800px:mt-0 mt-8">
+        <div className="w-[35%] ms-8 mt-0">
+          {/* <div className="w-full 800px:w-[35%] 800px:mt-0 mt-8"> */}
           <CartData orderData={orderData} />
         </div>
       </div>
@@ -209,6 +211,7 @@ const PaymentInfo = ({
   const [select, setSelect] = useState(1);
 
   return (
+    // <div className="w-full 800px:w-[95%] bg-[#fff] rounded-md p-5 pb-8">
     <div className="w-full 800px:w-[95%] bg-[#fff] rounded-md p-5 pb-8">
       {/* select buttons */}
       <div>
@@ -222,7 +225,7 @@ const PaymentInfo = ({
             ) : null}
           </div>
           <h4 className="text-[18px] pl-2 font-[600] text-[#000000b1]">
-            Pay with Debit/credit card
+            Pay with Debit/Credit card
           </h4>
         </div>
 
@@ -313,7 +316,7 @@ const PaymentInfo = ({
               <input
                 type="submit"
                 value="Submit"
-                className={`${styles.button} !bg-[#f63b60] text-[#fff] h-[45px] rounded-[5px] cursor-pointer text-[18px] font-[600]`}
+                className={`${styles.button} !bg-gradient-to-r from-teal-400 to-teal-600 text-[#fff] h-[45px] rounded-[5px] cursor-pointer text-[18px] font-[600]`}
               />
             </form>
           </div>
@@ -337,18 +340,19 @@ const PaymentInfo = ({
           </h4>
         </div>
 
-        {/* pay with payement */}
+        {/* pay with paypal */}
         {select === 2 ? (
           <div className="w-full flex border-b">
             <div
-              className={`${styles.button} !bg-[#f63b60] text-white h-[45px] rounded-[5px] cursor-pointer text-[18px] font-[600]`}
+              className={`${styles.button} !bg-gradient-to-r from-teal-400 to-teal-600 text-white h-[45px] rounded-[5px] cursor-pointer text-[18px] font-[600]`}
               onClick={() => setOpen(true)}
             >
               Pay Now
             </div>
             {open && (
               <div className="w-full fixed top-0 left-0 bg-[#00000039] h-screen flex items-center justify-center z-[99999]">
-                <div className="w-full 800px:w-[40%] h-screen 800px:h-[80vh] bg-white rounded-[5px] shadow flex flex-col justify-center p-8 relative overflow-y-scroll">
+                {/* <div className="w-full 800px:w-[40%] h-screen 800px:h-[80vh] bg-white rounded-[5px] shadow flex flex-col justify-center p-8 relative overflow-y-scroll"> */}
+                <div className="w-[40%] h-[80vh] bg-white rounded-[5px] shadow flex flex-col justify-center p-8 relative overflow-y-scroll">
                   <div className="w-full flex justify-end p-3">
                     <RxCross1
                       size={30}
@@ -358,8 +362,7 @@ const PaymentInfo = ({
                   </div>
                   <PayPalScriptProvider
                     options={{
-                      "client-id":
-                        "Aczac4Ry9_QA1t4c7TKH9UusH3RTe6onyICPoCToHG10kjlNdI-qwobbW9JAHzaRQwFMn2-k660853jn",
+                      "client-id": "Here you Need to Write Client ID",
                     }}
                   >
                     <PayPalButtons
@@ -399,7 +402,7 @@ const PaymentInfo = ({
               <input
                 type="submit"
                 value="Confirm"
-                className={`${styles.button} !bg-[#f63b60] text-[#fff] h-[45px] rounded-[5px] cursor-pointer text-[18px] font-[600]`}
+                className={`${styles.button} !bg-gradient-to-r from-teal-400 to-teal-600 text-[#fff] h-[45px] rounded-[5px] cursor-pointer text-[18px] font-[600]`}
               />
             </form>
           </div>
@@ -415,22 +418,22 @@ const CartData = ({ orderData }) => {
     <div className="w-full bg-[#fff] rounded-md p-5 pb-8">
       <div className="flex justify-between">
         <h3 className="text-[16px] font-[400] text-[#000000a4]">subtotal:</h3>
-        <h5 className="text-[18px] font-[600]">${orderData?.subTotalPrice}</h5>
+        <h5 className="text-[18px] font-[600]">₹{orderData?.subTotalPrice}</h5>
       </div>
       <br />
       <div className="flex justify-between">
         <h3 className="text-[16px] font-[400] text-[#000000a4]">shipping:</h3>
-        <h5 className="text-[18px] font-[600]">${shipping}</h5>
+        <h5 className="text-[18px] font-[600]">₹{shipping}</h5>
       </div>
       <br />
       <div className="flex justify-between border-b pb-3">
         <h3 className="text-[16px] font-[400] text-[#000000a4]">Discount:</h3>
         <h5 className="text-[18px] font-[600]">
-          {orderData?.discountPrice ? "$" + orderData.discountPrice : "-"}
+          {orderData?.discountPrice ? "₹" + orderData.discountPrice : "-"}
         </h5>
       </div>
       <h5 className="text-[18px] font-[600] text-end pt-3">
-        ${orderData?.totalPrice}
+        ₹{orderData?.totalPrice}
       </h5>
       <br />
     </div>

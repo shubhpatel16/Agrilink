@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Footer from "../components/Layout/Footer";
 import Header from "../components/Layout/Header";
 import Lottie from "react-lottie";
-import animationData from "../Assests/animation/107043-success.json";
+import animationData from "../Assests/animation/43-success.json";
 
 const OrderSuccessPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Header />
@@ -25,9 +28,9 @@ const Success = () => {
   };
   return (
     <div>
-      <Lottie options={defaultOptions} width={300} height={300} />
+      <Lottie options={defaultOptions} width={350} height={350} />
       <h5 className="text-center mb-14 text-[25px] text-[#000000a1]">
-        Your order is successful 😍
+        Your order is successful.
       </h5>
       <br />
       <br />

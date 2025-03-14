@@ -12,6 +12,10 @@ const BestSellingPage = () => {
   const { allProducts, isLoading } = useSelector((state) => state.products);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     const allProductsData = allProducts ? [...allProducts] : [];
     const sortedData = allProductsData?.sort((a, b) => b.sold_out - a.sold_out);
     setData(sortedData);

@@ -19,7 +19,7 @@ const DashboardHeader = () => {
       </div>
       <div className="flex items-center">
         <div className="flex items-center mr-4">
-          <Link to="/dashboard/cupouns" className="block">
+          <Link to="/dashboard-coupouns" className="block">
             {/* <Link to="/dashboard/cupouns" className="800px:block hidden"> */}
             <AiOutlineGift
               color="#555"
@@ -35,7 +35,7 @@ const DashboardHeader = () => {
               className="mx-5 cursor-pointer"
             />
           </Link>
-          <Link to="/dashboard-products" className="block">
+          <Link to="/dashboard-orders" className="block">
             {/* <Link to="/dashboard-products" className="800px:block hidden"> */}
             <FiShoppingBag
               color="#555"
@@ -43,7 +43,7 @@ const DashboardHeader = () => {
               className="mx-5 cursor-pointer"
             />
           </Link>
-          <Link to="/dashboard-orders" className="block">
+          <Link to="/dashboard-products" className="block">
             {/* <Link to="/dashboard-orders" className="800px:block hidden"> */}
             <FiPackage color="#555" size={30} className="mx-5 cursor-pointer" />
           </Link>

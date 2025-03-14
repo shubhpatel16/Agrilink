@@ -99,7 +99,7 @@ const ProfileSidebar = ({ setActive, active }) => {
         </span>
       </div>
 
-      <div
+      {/* <div
         className="flex items-center cursor-pointer w-full mb-8"
         onClick={() => setActive(6)}
       >
@@ -110,15 +110,15 @@ const ProfileSidebar = ({ setActive, active }) => {
         >
           Payment Methods
         </span>
-      </div>
+      </div> */}
 
       <div
         className="flex items-center cursor-pointer w-full mb-8"
-        onClick={() => setActive(7)}
+        onClick={() => setActive(6)}
       >
-        <RiLockPasswordLine size={20} color={active === 7 ? "red" : ""} />
+        <RiLockPasswordLine size={20} color={active === 6 ? "red" : ""} />
         <span
-          className={`pl-3 ${active === 7 ? "text-[red]" : ""}`}
+          className={`pl-3 ${active === 6 ? "text-[red]" : ""}`}
           // } 800px:block hidden`}
         >
           Change Password
@@ -127,11 +127,11 @@ const ProfileSidebar = ({ setActive, active }) => {
 
       <div
         className="flex items-center cursor-pointer w-full mb-8"
-        onClick={() => setActive(8)}
+        onClick={() => setActive(7)}
       >
-        <TbAddressBook size={20} color={active === 8 ? "red" : ""} />
+        <TbAddressBook size={20} color={active === 7 ? "red" : ""} />
         <span
-          className={`pl-3 ${active === 8 ? "text-[red]" : ""}`}
+          className={`pl-3 ${active === 7 ? "text-[red]" : ""}`}
           // } 800px:block hidden`}
         >
           Address
@@ -160,11 +160,11 @@ const ProfileSidebar = ({ setActive, active }) => {
       )} */}
       <div
         className="single_item flex items-center cursor-pointer w-full mb-8"
-        onClick={() => setActive(9) || logoutHandler()}
+        onClick={() => setActive(8) || logoutHandler()}
       >
-        <AiOutlineLogin size={20} color={active === 9 ? "red" : ""} />
+        <AiOutlineLogin size={20} color={active === 8 ? "red" : ""} />
         <span
-          className={`pl-3 ${active === 9 ? "text-[red]" : ""}`}
+          className={`pl-3 ${active === 8 ? "text-[red]" : ""}`}
           // } 800px:block hidden`}
         >
           Log out

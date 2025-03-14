@@ -5,13 +5,19 @@ import ShopCreateEvents from "../pages/Shop/ShopCreateEvents";
 import ShopAllEvents from "../pages/Shop/ShopAllEvents";
 import ShopAllCoupouns from "../pages/Shop/ShopAllCoupouns";
 import ShopPreviewPage from "../pages/Shop/ShopPreviewPage";
+import ShopAllOrders from "../pages/Shop/ShopAllOrders";
+import ShopOrderDetails from "../pages/Shop/ShopOrderDetails";
+import ShopAllRefunds from "../pages/Shop/ShopAllRefunds";
 
 export {
   ShopDashboardPage,
+  ShopAllOrders,
   ShopCreateProduct,
   ShopAllProducts,
   ShopCreateEvents,
   ShopAllEvents,
   ShopAllCoupouns,
   ShopPreviewPage,
+  ShopOrderDetails,
+  ShopAllRefunds,
 };

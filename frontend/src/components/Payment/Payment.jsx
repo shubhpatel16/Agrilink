@@ -361,9 +361,11 @@ const PaymentInfo = ({
                     />
                   </div>
                   <PayPalScriptProvider
-                    options={{
-                      "client-id": "Here you Need to Write Client ID",
-                    }}
+                    options={
+                      {
+                        // "client-id": "Here you Need to Write Client ID",
+                      }
+                    }
                   >
                     <PayPalButtons
                       style={{ layout: "vertical" }}
